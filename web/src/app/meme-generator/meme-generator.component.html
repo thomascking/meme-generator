@@ -1,0 +1,13 @@
+<form (ngSubmit)="generateMeme()">
+  <div>
+    <label>Prompt</label>
+    <input name="prompt" [(ngModel)]="prompt" />
+    <button>Generate</button>
+  </div>
+</form>
+
+<div *ngIf="currentMeme" class="meme">
+  <h1 class="top">{{ currentMeme.top }}</h1>
+  <img [src]="currentMeme.imageUrl" [alt]="currentMeme.image" />
+  <h1 class="bottom">{{ currentMeme.bottom }}</h1>
+</div>

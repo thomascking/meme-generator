@@ -68,7 +68,8 @@
               "browserTarget": "meme-generator:build:production"
             },
             "development": {
-              "browserTarget": "meme-generator:build:development"
+              "browserTarget": "meme-generator:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -100,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "365d2c96-a898-4577-8a9a-7414fcfb9534"
   }
 }
