@@ -12,6 +12,8 @@ interface Meme {
 
 dotenv.config();
 
+console.log(process.env.OPENAI_SECRET);
+
 const generateChatConfig = (prompt: string) => ({
   model: "gpt-3.5-turbo",
   messages: [
@@ -47,10 +49,10 @@ const parseResponse = (message: string) => {
       meme.image = line.slice(7);
     }
     else if (line.startsWith('Top:')) {
-      meme.top = line.slice(6, line.length - 1);
+      meme.top = line.slice(5);
     }
     else if (line.startsWith('Bottom:')) {
-      meme.bottom = line.slice(9, line.length - 1);
+      meme.bottom = line.slice(8);
     }
     // same for top and bottom text
   }
